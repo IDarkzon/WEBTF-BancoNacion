@@ -1,0 +1,6 @@
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\bin\Debug\ProyBanco_BE.dll
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\bin\Debug\ProyBanco_BE.pdb
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.csproj.AssemblyReference.cache
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.csproj.CoreCompileInputs.cache
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.dll
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.pdb

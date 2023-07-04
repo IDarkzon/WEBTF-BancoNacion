@@ -1,0 +1,11 @@
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_ADO.dll
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_ADO.pdb
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_BE.dll
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\System.Data.SqlClient.dll
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_BE.pdb
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\System.Data.SqlClient.xml
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.AssemblyReference.cache
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.CoreCompileInputs.cache
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.CopyComplete
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.dll
+C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.pdb
