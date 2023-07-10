@@ -4,32 +4,24 @@
 
 <html lang="es">
 <head runat="server">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Página Maestra</title>
-    <link href="CSS/main.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <%--Referencia a la hoja de estilos  de la carpeta CSS--%>
+    <link href="CSS/main.css" rel="stylesheet" type="text/css" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
-        <%-- Pendiente | Contenido del head --%>
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <h1>Página Maestra (No tocar)</h1>
-    <asp:ContentPlaceHolder ID="header" runat="server">
-        <%-- Pendiente | Contenido del header --%>
-        <div id="Header">
-            <p>Contenido Cabecera</p>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager" runat="server" EnableScriptGlobalization="true"></asp:ScriptManager>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
-    </asp:ContentPlaceHolder>
-    <asp:ContentPlaceHolder ID="mainContent" runat="server">
-        <asp:ScriptManager ID="SCAJAX" runat="server" EnableScriptGlobalization="True"></asp:ScriptManager>
-        <%-- Pendiente | Contenido Principal --%>
-    </asp:ContentPlaceHolder>
-    <asp:ContentPlaceHolder ID="footer" runat="server">
-        <%-- Pendiente | Contenido del footer --%>
-        <div id="Footer">
-            <p>Contenido Pie de Página</p>
-        </div>
-    </asp:ContentPlaceHolder>
+    </form>
 </body>
 </html>
