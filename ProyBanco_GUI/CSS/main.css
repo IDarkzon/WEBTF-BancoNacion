@@ -1,1 +1,91 @@
-﻿
+﻿/* Ubuntu */
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../Fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+.espaciado {
+    /* Agrega espaciado en los lados superior e inferior de las secciones */
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.contenedor {
+    /* Ancho máximo de las cajas */
+    max-width: 1200px;
+    /* Centrar horizontalmente a las cajas */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mueve a los contenedores uno al lado de otro  */
+.fila {
+    display: flex;
+    /* Truco */
+    /* Quitamos el espacio interno de la primera y ultima caja hijo */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.centrar_cajas {
+    justify-content: center; /* Centra el contenido de las cajas */
+}
+
+.centrar_texto {
+    text-align: center; /* Centra el texto */
+}
+
+.columna {
+    /* Mantiene el ancho de las cajas uniformes */
+    flex-basis: 0; /* Ancho minimo de una caja */
+    flex-grow: 1; /* Establece de forma uniforme el ancho de las cajas hijo */
+    /* Espaciado interno izq y der de cada caja */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-size: 1.1em !important;
+
+    background-color: black;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+#pie {
+    color: white;
+    background-color: black; /* Color de Fondo */
+    padding-top: 10px; /* Espacio superior */
+    padding-bottom: 10px; /* Espacio inferior */
+    text-align: center; /* Alineación del Texto al centro */
+}
+
+#Imagen_Central {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#mensaje {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#mensaje:hover {
+    color:red;
+}
+
+body {
+    font-family: Ubuntu !important;
+}
