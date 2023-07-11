@@ -4,3 +4,9 @@ C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_B
 C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.csproj.CoreCompileInputs.cache
 C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.dll
 C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.pdb
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_BE\bin\Debug\ProyBanco_BE.dll
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_BE\bin\Debug\ProyBanco_BE.pdb
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.csproj.AssemblyReference.cache
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.csproj.CoreCompileInputs.cache
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.dll
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_BE\obj\Debug\ProyBanco_BE.pdb
