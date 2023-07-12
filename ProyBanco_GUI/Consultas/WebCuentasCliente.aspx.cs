@@ -31,6 +31,8 @@ namespace ProyBanco_GUI.Consultas
             try
             {
                 objClienteBE = objClienteBL.ConsultarCliente(txtCodigo.Text.Trim());
+                grvCuentas.DataSource = null;
+                grvCuentas.DataBind();
 
                 if (objClienteBE.Cod_Cli == null)
                 {

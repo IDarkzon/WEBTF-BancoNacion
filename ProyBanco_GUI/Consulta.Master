@@ -32,13 +32,13 @@
                         <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/WebCuentasCliente.aspx">Cuentas por Cliente</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="#">Consulta 2</asp:HyperLink>
+                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/ConsultaPrincipal.aspx">Consulta 2</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="#">Consulta 3</asp:HyperLink>
+                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/ConsultaPrincipal.aspx">Consulta 3</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="#">Consulta 4</asp:HyperLink>
+                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/ConsultaPrincipal.aspx">Consulta 4</asp:HyperLink>
                     </li>
                 </ul>
             </div>

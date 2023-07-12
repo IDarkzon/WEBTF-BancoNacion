@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ProyBanco_GUI.Main" %>
+﻿</@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ProyBanco_GUI.Main">
 
 <!DOCTYPE html>
 
