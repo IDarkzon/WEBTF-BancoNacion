@@ -10,7 +10,7 @@ using ProyBanco_BE;
 
 namespace ProyBanco_BL
 {
-    internal class PrestamoBL
+    public class PrestamoBL
     {
         PrestamoADO objPrestamoADO = new PrestamoADO();
 
