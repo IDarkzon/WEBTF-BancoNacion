@@ -87,7 +87,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\main.css" />
     <Content Include="Fonts\Ubuntu\UFL.txt" />
+    <Content Include="Images\activo.png" />
+    <Content Include="Images\inactivo.png" />
+    <Content Include="Images\icon.ico" />
     <Content Include="Images\imagen_consulta.jpg" />
+    <Content Include="Images\lupa.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

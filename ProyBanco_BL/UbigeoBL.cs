@@ -23,5 +23,10 @@ namespace ProyBanco_BL
         {
             return objUbigeoADO.Ubigeo_DistritosProvinciaDepartamento(strIdDep, strIdProv);
         }
+
+        public String ObtenerUbigeo(String idUbigeo)
+        {
+            return objUbigeoADO.ObtenerUbigeo(idUbigeo);
+        }
     }
 }

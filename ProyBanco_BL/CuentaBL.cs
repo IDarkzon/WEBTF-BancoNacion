@@ -38,5 +38,10 @@ namespace ProyBanco_BL
         {
             return objCuentaADO.EliminarCuenta(strCodigo);
         }
+
+        public DataTable CuentasCliente(String strCod_cli)
+        {
+            return objCuentaADO.CuentasCliente(strCod_cli);
+        }
     }
 }

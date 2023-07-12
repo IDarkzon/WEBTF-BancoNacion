@@ -79,6 +79,31 @@ namespace ProyBanco_ADO
                 throw new Exception(ex.Message);
             }
         }
+
+        public String ObtenerUbigeo(String idUbigeo)
+        {
+            try
+            {
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ObtenerUbigeo";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@idUbigeo", idUbigeo);
+
+                cmd.Parameters.Add("@Ubicacion", SqlDbType.NVarChar, 50);
+                cmd.Parameters["@Ubicacion"].Direction = ParameterDirection.Output;
+
+                cnx.Open();
+                cmd.ExecuteScalar();
+                String ubicacion = Convert.ToString(cmd.Parameters["@Ubicacion"].Value);
+                return ubicacion;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
 

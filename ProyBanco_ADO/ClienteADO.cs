@@ -36,6 +36,13 @@ namespace ProyBanco_ADO
             {
                 throw new Exception(ex.Message);
             }
+            finally
+            {
+                if (cnx.State == ConnectionState.Open)
+                {
+                    cnx.Close();
+                }
+            }
         }
 
         public ClienteBE ConsultarCliente(String strCodigo)

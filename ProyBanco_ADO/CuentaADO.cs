@@ -184,5 +184,28 @@ namespace ProyBanco_ADO
                 }
             }
         }
+
+        public DataTable CuentasCliente(String strCod_cli)
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_CuentasCliente";
+                cmd.Parameters.Clear();
+
+                cmd.Parameters.AddWithValue("@Cod_cli", strCod_cli);
+
+                SqlDataAdapter ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "CuentasCliente");
+                return dts.Tables["CuentasCliente"];
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
