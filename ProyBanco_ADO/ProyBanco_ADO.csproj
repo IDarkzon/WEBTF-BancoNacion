@@ -49,6 +49,7 @@
     <Compile Include="ConexionADO.cs" />
     <Compile Include="CuentaADO.cs" />
     <Compile Include="EmpleadoADO.cs" />
+    <Compile Include="PrestamoADO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UbigeoADO.cs" />
     <Compile Include="UsuarioADO.cs" />
