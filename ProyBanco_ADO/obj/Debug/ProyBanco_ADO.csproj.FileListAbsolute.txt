@@ -9,3 +9,14 @@ C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_
 C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.CopyComplete
 C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.dll
 C:\Users\omedi\source\repos\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.pdb
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_ADO.dll
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_ADO.pdb
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_BE.dll
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\System.Data.SqlClient.dll
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\ProyBanco_BE.pdb
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\bin\Debug\System.Data.SqlClient.xml
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.AssemblyReference.cache
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.CoreCompileInputs.cache
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.csproj.CopyComplete
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.dll
+D:\ISIL\Ciclo-III\DESARROLLO DE APLICACIONES I\Semana 16\WEBTF-BancoNacion\ProyBanco_ADO\obj\Debug\ProyBanco_ADO.pdb
