@@ -10,14 +10,14 @@ using ProyBanco_BE;
 
 namespace ProyBanco_ADO
 {
-    public class PrestamoADO
+    public class PagoADO
     {
         ConexionADO MiConexion = new ConexionADO();
         SqlConnection cnx = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         SqlDataReader dtr;
 
-        public DataTable ListarPrestamo()
+        public DataTable ListarPago()
         {
             try
             {
@@ -25,12 +25,12 @@ namespace ProyBanco_ADO
                 cnx.ConnectionString = MiConexion.GetCnx();
                 cmd.Connection = cnx;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_ListarPrestamo";
+                cmd.CommandText = "usp_ListarPago";
                 cmd.Parameters.Clear();
 
                 SqlDataAdapter ada = new SqlDataAdapter(cmd);
-                ada.Fill(dts, "Prestamos");
-                return dts.Tables["Prestamos"];
+                ada.Fill(dts, "Pagos");
+                return dts.Tables["Pagos"];
             }
             catch (SqlException ex)
             {
@@ -38,18 +38,18 @@ namespace ProyBanco_ADO
             }
         }
 
-        public PrestamoBE ConsultarPrestamo(String strCodigo)
+        public PagoBE ConsultarPago(String strCodigo)
         {
             try
             {
-                PrestamoBE objPrestamoBE = new PrestamoBE();
+                PagoBE objPagoBE = new PagoBE();
 
                 cnx.ConnectionString = MiConexion.GetCnx();
                 cmd.Connection = cnx;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_ConsultarPrestamo";
+                cmd.CommandText = "usp_ConsultarPago";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@idPrestamo", strCodigo);
+                cmd.Parameters.AddWithValue("@idPago", strCodigo);
                 cnx.Open();
 
                 dtr = cmd.ExecuteReader();
@@ -57,21 +57,16 @@ namespace ProyBanco_ADO
                 if (dtr.HasRows == true)
                 {
                     dtr.Read();
-                    objPrestamoBE.Cod_Pre = dtr["Codigo"].ToString();
-                    objPrestamoBE.Mon_Pre = Convert.ToSingle(dtr["Monto"].ToString());
-                    objPrestamoBE.Cuot_Pre = Convert.ToInt16(dtr["Cuotas"].ToString());
-                    objPrestamoBE.Fec_Sol = Convert.ToDateTime(dtr["Fecha Solicitud"].ToString());
-                    objPrestamoBE.Fec_Rech = Convert.ToDateTime(dtr["Fecha Rechazo"].ToString());
-                    objPrestamoBE.Fec_Can = Convert.ToDateTime(dtr["Fecha Cancelacion"].ToString());
-                    objPrestamoBE.Pre_Est = Convert.ToInt16(dtr["Pre_Est"].ToString());
-                    objPrestamoBE.Com_Deu = Convert.ToInt16(dtr["Com_Deu"].ToString());
-                    objPrestamoBE.Est_Pre = Convert.ToInt16(dtr["Est_Pre"].ToString());
-                    objPrestamoBE.Cod_Cli = dtr["Cod_Cli"].ToString();
-                    objPrestamoBE.Cod_Emp = dtr["Cod_Emp"].ToString();
-                    objPrestamoBE.Cod_Age = dtr["Cod_Age"].ToString();
+                    objPagoBE.Cod_Pag = dtr["Codigo"].ToString();
+                    objPagoBE.Num_cuot_Pag = Convert.ToInt16(dtr["Numero Cuota"].ToString());
+                    objPagoBE.Mon_Pag = Convert.ToSingle(dtr["Monto"].ToString());
+                    objPagoBE.Fec_pro_Pag = Convert.ToDateTime(dtr["Fecha Programada"].ToString());
+                    objPagoBE.Fec_real_Pag = Convert.ToDateTime(dtr["Fecha Real"].ToString());
+                    objPagoBE.Cod_Pre = dtr["Codigo Prestamo"].ToString();
+                    objPagoBE.Est_Pag = Convert.ToInt16(dtr["Estado"].ToString());
                 }
                 dtr.Close();
-                return objPrestamoBE;
+                return objPagoBE;
             }
             catch (SqlException ex)
             {
@@ -86,25 +81,23 @@ namespace ProyBanco_ADO
             }
         }
 
-        public Boolean InsertarPrestamo(PrestamoBE objPrestamoBE)
+        public Boolean InsertarPago(PagoBE objPagoBE)
         {
             try
             {
                 cnx.ConnectionString = MiConexion.GetCnx();
                 cmd.Connection = cnx;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_InsertarPrestamo";
+                cmd.CommandText = "usp_InsertarPago";
                 cmd.Parameters.Clear();
 
-                cmd.Parameters.AddWithValue("@Mon_Pre", objPrestamoBE.Mon_Pre);
-                cmd.Parameters.AddWithValue("@Cuot_Pre", objPrestamoBE.Cuot_Pre);
-                cmd.Parameters.AddWithValue("@Pre_Est", objPrestamoBE.Pre_Est);
-                cmd.Parameters.AddWithValue("@Com_Deu", objPrestamoBE.Com_Deu);
-                cmd.Parameters.AddWithValue("@Est_Pre", objPrestamoBE.Est_Pre);
-                cmd.Parameters.AddWithValue("@Cod_Cli", objPrestamoBE.Cod_Cli);
-                cmd.Parameters.AddWithValue("@Cod_Emp", objPrestamoBE.Cod_Emp);
-                cmd.Parameters.AddWithValue("@Cod_Age", objPrestamoBE.Cod_Age);
-                cmd.Parameters.AddWithValue("@Usu_Registro", objPrestamoBE.Usu_Registro);
+                cmd.Parameters.AddWithValue("@Num_cuot_Pag", objPagoBE.Num_cuot_Pag);
+                cmd.Parameters.AddWithValue("@Mon_Pag", objPagoBE.Mon_Pag);
+                cmd.Parameters.AddWithValue("@Fec_pro_Pag", objPagoBE.Fec_pro_Pag);
+                cmd.Parameters.AddWithValue("@Fec_real_Pag", objPagoBE.Fec_real_Pag);
+                cmd.Parameters.AddWithValue("@Cod_Pre", objPagoBE.Cod_Pre);
+                cmd.Parameters.AddWithValue("@Est_Pag", objPagoBE.Est_Pag);
+                cmd.Parameters.AddWithValue("@Usu_Registro", objPagoBE.Usu_Registro);
 
                 cnx.Open();
                 cmd.ExecuteNonQuery();
@@ -124,7 +117,7 @@ namespace ProyBanco_ADO
             }
         }
 
-        public Boolean ActualizarPrestamo(PrestamoBE objPrestamoBE)
+        public Boolean ActualizarPago(PagoBE objPagoBE)
         {
             try
             {
@@ -134,18 +127,14 @@ namespace ProyBanco_ADO
                 cmd.CommandText = "usp_ActualizarPrestamo";
                 cmd.Parameters.Clear();
 
-                cmd.Parameters.AddWithValue("@Cod_Pre", objPrestamoBE.Cod_Pre);
-                cmd.Parameters.AddWithValue("@Mon_Pre", objPrestamoBE.Mon_Pre);
-                cmd.Parameters.AddWithValue("@Cuot_Pre", objPrestamoBE.Cuot_Pre);
-                cmd.Parameters.AddWithValue("@Fec_Rech", objPrestamoBE.Fec_Rech);
-                cmd.Parameters.AddWithValue("@Fec_Can", objPrestamoBE.Fec_Can);
-                cmd.Parameters.AddWithValue("@Pre_Est", objPrestamoBE.Pre_Est);
-                cmd.Parameters.AddWithValue("@Com_Deu", objPrestamoBE.Com_Deu);
-                cmd.Parameters.AddWithValue("@Est_Pre", objPrestamoBE.Est_Pre);
-                cmd.Parameters.AddWithValue("@Cod_Cli", objPrestamoBE.Cod_Cli);
-                cmd.Parameters.AddWithValue("@Cod_Emp", objPrestamoBE.Cod_Emp);
-                cmd.Parameters.AddWithValue("@Cod_Age", objPrestamoBE.Cod_Age);
-                cmd.Parameters.AddWithValue("@Usu_Ult_Mod", objPrestamoBE.Usu_Ult_Mod);
+                cmd.Parameters.AddWithValue("@Cod_Pag", objPagoBE.Cod_Pag);
+                cmd.Parameters.AddWithValue("@Num_cuot_Pag", objPagoBE.Num_cuot_Pag);
+                cmd.Parameters.AddWithValue("@Mon_Pag", objPagoBE.Mon_Pag);
+                cmd.Parameters.AddWithValue("@Fec_pro_Pag", objPagoBE.Fec_pro_Pag);
+                cmd.Parameters.AddWithValue("@Fec_real_Pag", objPagoBE.Fec_real_Pag);
+                cmd.Parameters.AddWithValue("@Cod_Pre", objPagoBE.Cod_Pre);
+                cmd.Parameters.AddWithValue("@Est_Pag", objPagoBE.Est_Pag);
+                cmd.Parameters.AddWithValue("@Usu_Ult_Mod", objPagoBE.Usu_Ult_Mod);
 
                 cnx.Open();
                 cmd.ExecuteNonQuery();
@@ -165,16 +154,16 @@ namespace ProyBanco_ADO
             }
         }
 
-        public Boolean EliminarPrestamo(String strCodigo)
+        public Boolean EliminarPago(String strCodigo)
         {
             try
             {
                 cnx.ConnectionString = MiConexion.GetCnx();
                 cmd.Connection = cnx;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_EliminarPrestamo";
+                cmd.CommandText = "usp_EliminarPago";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@idPrestamo", strCodigo);
+                cmd.Parameters.AddWithValue("@idPago", strCodigo);
 
                 cnx.Open();
                 cmd.ExecuteNonQuery();
