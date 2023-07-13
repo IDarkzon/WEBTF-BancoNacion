@@ -123,3 +123,12 @@ body {
 .panel {
     margin:auto;
 }
+
+.inputRO {
+    border: none !important;
+    border-bottom: 1px solid black !important;
+}
+
+.inputRO:focus {
+    outline: none !important;
+}

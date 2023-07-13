@@ -108,5 +108,20 @@ namespace ProyBanco_GUI.Consultas
                 PopMensaje.Show();
             }
         }
+
+        protected void grvCuentas_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if(e.Row.Cells[5].Text == "Activo")
+                {
+                    e.Row.Cells[5].ForeColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    e.Row.Cells[5].ForeColor = System.Drawing.Color.Red;
+                }
+            }
+        }
     }
 }

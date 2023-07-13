@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Consultas\ConsultaPrincipal.aspx" />
     <Content Include="Consultas\WebCuentasCliente.aspx" />
+    <Content Include="Consultas\WebGraficosTransacciones.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="Consultas\WebCuentasCliente.aspx.designer.cs">
       <DependentUpon>WebCuentasCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\WebGraficosTransacciones.aspx.cs">
+      <DependentUpon>WebGraficosTransacciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\WebGraficosTransacciones.aspx.designer.cs">
+      <DependentUpon>WebGraficosTransacciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

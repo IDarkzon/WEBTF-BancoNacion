@@ -1,9 +1,6 @@
 ﻿<%@ Page Title="Cuentas por Cliente" Language="C#" MasterPageFile="~/Consulta.Master" AutoEventWireup="true" CodeBehind="WebCuentasCliente.aspx.cs" Inherits="ProyBanco_GUI.Consultas.WebCuentasCliente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style14 {
-            width: 85%;
-        }
         .auto-style17 {
             width: 131px;
         }
@@ -16,20 +13,53 @@
         .auto-style26 {
             width: 561px;
         }
-        .auto-style27 {
-            width: 96px;
-        }
-        .auto-style28 {
-            width: 140px;
-        }
         .auto-style29 {
             width: 159px;
         }
         .auto-style31 {
-            width: 102px;
+            width: 110px;
         }
         .auto-style32 {
             width: 148px;
+        }
+        .auto-style33 {
+            width: 154px;
+        }
+        .auto-style34 {
+            width: 103px;
+        }
+        .auto-style35 {
+            height: 19px;
+        }
+        .auto-style36 {
+            width: 159px;
+            height: 19px;
+        }
+        .auto-style37 {
+            width: 154px;
+            height: 19px;
+        }
+        .auto-style38 {
+            width: 131px;
+            height: 19px;
+        }
+        .auto-style39 {
+            width: 110px;
+            height: 27px;
+        }
+        .auto-style40 {
+            width: 148px;
+            height: 27px;
+        }
+        .auto-style41 {
+            height: 27px;
+        }
+        .auto-style43 {
+            width: 131px;
+            height: 27px;
+        }
+        .auto-style44 {
+            width: 95%
         }
     </style>
 </asp:Content>
@@ -38,16 +68,16 @@
         <div class="contenedor">
             <h3>Consulta del número de cuentas por cliente</h3>
             <br />
-            <table cellpadding="0" cellspacing="0" class="auto-style14" id="InfoCliente">
+            <table cellpadding="0" cellspacing="0" class="auto-style44" id="InfoCliente">
                 <tr>
                     <td class="auto-style31">Ingrese Código:</td>
                     <td class="auto-style32">
-                        <asp:TextBox ID="txtCodigo" runat="server" MaxLength="4" Width="122px"></asp:TextBox>
+                        <asp:TextBox ID="txtCodigo" runat="server" MaxLength="4" Width="122px" BorderWidth="1px"></asp:TextBox>
                         <asp:ImageButton ID="imgBuscar" runat="server" Height="17px" ImageUrl="~/Images/lupa.png" Width="17px" OnClick="imgBuscar_Click" />
                     </td>
-                    <td class="auto-style27">&nbsp;</td>
+                    <td class="auto-style34">&nbsp;</td>
                     <td class="auto-style29">&nbsp;</td>
-                    <td class="auto-style28">Estado:</td>
+                    <td class="auto-style33">Activo:</td>
                     <td class="auto-style17">
                         <asp:Image ID="imgEstado" runat="server" />
                     </td>
@@ -55,80 +85,90 @@
                 <tr>
                     <td class="auto-style31">Nombre:</td>
                     <td class="auto-style32">
-                        <asp:TextBox ID="txtNombre" runat="server" ReadOnly="True" Width="122px"></asp:TextBox>
+                        <asp:TextBox ID="txtNombre" runat="server" ReadOnly="True" Width="135px" CssClass="inputRO"></asp:TextBox>
                     </td>
-                    <td class="auto-style27">Apellidos:</td>
+                    <td class="auto-style34">Apellidos:</td>
                     <td class="auto-style29">
-                        <asp:TextBox ID="txtApellidos" runat="server" ReadOnly="True" Width="140px"></asp:TextBox>
+                        <asp:TextBox ID="txtApellidos" runat="server" ReadOnly="True" Width="175px" CssClass="inputRO"></asp:TextBox>
                     </td>
-                    <td class="auto-style28">Fecha de Nacimiento:</td>
+                    <td class="auto-style33">Fecha de Nacimiento:</td>
                     <td class="auto-style17">
-                        <asp:TextBox ID="txtFecNacimiento" runat="server" ReadOnly="True" Width="110px" CssClass="centrar"></asp:TextBox>
+                        <asp:TextBox ID="txtFecNacimiento" runat="server" ReadOnly="True" Width="110px" CssClass="inputRO centrar"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style31">Documento:</td>
                     <td class="auto-style32">
-                        <asp:TextBox ID="txtDocumento" runat="server" ReadOnly="True" Width="122px"></asp:TextBox>
+                        <asp:TextBox ID="txtDocumento" runat="server" ReadOnly="True" Width="135px" CssClass="inputRO"></asp:TextBox>
                     </td>
-                    <td class="auto-style27">T. Documento:</td>
+                    <td class="auto-style34">T. Documento:</td>
                     <td class="auto-style29">
-                        <asp:TextBox ID="txtTipoDocumento" runat="server" ReadOnly="True" Width="165px"></asp:TextBox>
+                        <asp:TextBox ID="txtTipoDocumento" runat="server" ReadOnly="True" Width="175px" CssClass="inputRO"></asp:TextBox>
                     </td>
-                    <td class="auto-style28">Dirección:</td>
+                    <td class="auto-style33">Dirección:</td>
                     <td class="auto-style17">
-                        <asp:TextBox ID="txtDireccion" runat="server" ReadOnly="True" Width="180px"></asp:TextBox>
+                        <asp:TextBox ID="txtDireccion" runat="server" ReadOnly="True" Width="320px" CssClass="inputRO"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style31">Teléfono:</td>
                     <td class="auto-style32">
-                        <asp:TextBox ID="txtTelefono" runat="server" ReadOnly="True" Width="122px"></asp:TextBox>
+                        <asp:TextBox ID="txtTelefono" runat="server" ReadOnly="True" Width="135px" CssClass="inputRO"></asp:TextBox>
                     </td>
-                    <td class="auto-style27">Correo:</td>
+                    <td class="auto-style34">Correo:</td>
                     <td class="auto-style29">
-                        <asp:TextBox ID="txtCorreo" runat="server" ReadOnly="True" Width="210px"></asp:TextBox>
+                        <asp:TextBox ID="txtCorreo" runat="server" ReadOnly="True" Width="240px" CssClass="inputRO"></asp:TextBox>
                     </td>
-                    <td class="auto-style28">Ubigeo:</td>
+                    <td class="auto-style33">Ubigeo:</td>
                     <td class="auto-style17">
-                        <asp:TextBox ID="txtUbigeo" runat="server" ReadOnly="True" Width="220px"></asp:TextBox>
+                        <asp:TextBox ID="txtUbigeo" runat="server" ReadOnly="True" Width="320px" CssClass="inputRO"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="3">
+                    <td colspan="3" class="auto-style35">
                         <asp:Label ID="lblMensaje" runat="server" CssClass="error"></asp:Label>
                     </td>
-                    <td class="auto-style29">&nbsp;</td>
-                    <td class="auto-style28">&nbsp;</td>
-                    <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style36"></td>
+                    <td class="auto-style37"></td>
+                    <td class="auto-style38"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style31">
-                        &nbsp;</td>
-                    <td class="auto-style32">&nbsp;</td>
-                    <td colspan="2" id="celdaBTN">
+                    <td class="auto-style39">
+                        </td>
+                    <td class="auto-style40"></td>
+                    <td colspan="3" id="celdaBTN" class="auto-style41">
                         <asp:Button ID="btnConsultar" runat="server" Text="Consultar" OnClick="btnConsultar_Click" />
                     </td>
-                    <td class="auto-style28">&nbsp;</td>
-                    <td class="auto-style17">&nbsp;</td>
+                    <td class="auto-style43"></td>
                 </tr>
                 <tr>
                     <td class="auto-style31">&nbsp;</td>
                     <td class="auto-style32">&nbsp;</td>
-                    <td class="auto-style27">&nbsp;</td>
+                    <td class="auto-style34">&nbsp;</td>
                     <td class="auto-style29">&nbsp;</td>
-                    <td class="auto-style28">&nbsp;</td>
+                    <td class="auto-style33">&nbsp;</td>
                     <td class="auto-style17">&nbsp;</td>
                 </tr>
             </table>
-            <asp:GridView ID="grvCuentas" runat="server" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateColumns="False" Width="812px">
+            <asp:GridView ID="grvCuentas" runat="server" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateColumns="False" Width="812px" OnRowDataBound="grvCuentas_RowDataBound">
                 <Columns>
                     <asp:BoundField DataField="Numero Cuenta" HeaderText="Número Cuenta" />
-                    <asp:BoundField DataField="Tipo Moneda" HeaderText="Tipo Moneda" />
-                    <asp:BoundField DataField="Saldo Cuenta" DataFormatString="{0:n}" HeaderText="Saldo Cuenta" />
-                    <asp:BoundField DataField="Tipo Cuenta" HeaderText="Tipo Cuenta" />
-                    <asp:BoundField DataField="Fecha Apertura" DataFormatString="{0:d}" HeaderText="Fecha Apertura" />
-                    <asp:BoundField DataField="Estado Cuenta" HeaderText="Estado Cuenta" />
+                    <asp:BoundField DataField="Tipo Moneda" HeaderText="Tipo Moneda" >
+                    <HeaderStyle HorizontalAlign="Center" />
+                    <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Saldo Cuenta" DataFormatString="{0:n}" HeaderText="Saldo Cuenta" >
+                    <ItemStyle HorizontalAlign="Right" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Tipo Cuenta" HeaderText="Tipo Cuenta" >
+                    <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Fecha Apertura" DataFormatString="{0:d}" HeaderText="Fecha Apertura" >
+                    <ItemStyle HorizontalAlign="Right" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Estado Cuenta" HeaderText="Estado Cuenta" >
+                    <ItemStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
