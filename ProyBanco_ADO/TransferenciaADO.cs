@@ -180,5 +180,26 @@ namespace ProyBanco_ADO
                 }
             }
         }
+
+        public DataTable TransferenciasInfo()
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_TransferenciasInfo";
+                cmd.Parameters.Clear();
+
+                SqlDataAdapter ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "TransferenciasInfo");
+                return dts.Tables["TransferenciasInfo"];
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

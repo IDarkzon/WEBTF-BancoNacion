@@ -194,5 +194,61 @@ namespace ProyBanco_ADO
                 }
             }
         }
+
+        public DataTable ListarPrestamos_Paginacion(string strCod_Cli, String strCod_Emp, String strEstado, Int16 intNumPag)
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ListarPrestamos_Paginacion";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@Cod_Cli", strCod_Cli);
+                cmd.Parameters.AddWithValue("@Cod_Emp", strCod_Emp);
+                cmd.Parameters.AddWithValue("@Estado", strEstado);
+                cmd.Parameters.AddWithValue("@NumPag", intNumPag);
+
+                SqlDataAdapter ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "PrestamosPaginacion");
+                return dts.Tables["PrestamosPaginacion"];
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        public Int16 NumPag_ListarPrestamos_Paginacion(String strCod_Cli, String strCod_Emp, String strEstado)
+        {
+            try
+            {
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_NumPag_ListarPrestamos_Paginacion";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@Cod_Cli", strCod_Cli);
+                cmd.Parameters.AddWithValue("@Cod_Emp", strCod_Emp);
+                cmd.Parameters.AddWithValue("@Estado", strEstado);
+
+                // Parametro de salida
+                cmd.Parameters.Add("@Numreg", SqlDbType.Int);
+                cmd.Parameters["@Numreg"].Direction = ParameterDirection.Output;
+
+                // Abrir la conexion y ejecutar el procedimiento almacenado
+                cnx.Open();
+                cmd.ExecuteScalar();
+                Int16 numreg = Convert.ToInt16(cmd.Parameters["@Numreg"].Value);
+                return numreg;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

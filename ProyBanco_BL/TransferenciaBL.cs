@@ -38,5 +38,10 @@ namespace ProyBanco_BL
         {
             return objTransferenciaADO.EliminarTransferencia(strCodTransferencia);
         }
+
+        public DataTable TransferenciasInfo()
+        {
+            return objTransferenciaADO.TransferenciasInfo();
+        }
     }
 }

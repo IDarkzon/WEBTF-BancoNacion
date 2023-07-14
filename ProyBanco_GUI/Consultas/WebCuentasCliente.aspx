@@ -125,6 +125,17 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style31">&nbsp;</td>
+                    <td class="auto-style32">
+                        &nbsp;</td>
+                    <td class="auto-style34">&nbsp;</td>
+                    <td class="auto-style29">
+                        &nbsp;</td>
+                    <td class="auto-style33">&nbsp;</td>
+                    <td class="auto-style17">
+                        &nbsp;</td>
+                </tr>
+                <tr>
                     <td colspan="3" class="auto-style35">
                         <asp:Label ID="lblMensaje" runat="server" CssClass="error"></asp:Label>
                     </td>

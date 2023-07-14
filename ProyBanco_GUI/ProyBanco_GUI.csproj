@@ -49,6 +49,7 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,7 +70,8 @@
   <ItemGroup>
     <Content Include="Consultas\ConsultaPrincipal.aspx" />
     <Content Include="Consultas\WebCuentasCliente.aspx" />
-    <Content Include="Consultas\WebGraficosTransacciones.aspx" />
+    <Content Include="Consultas\WebGraficosTransferencias.aspx" />
+    <Content Include="Consultas\WebPrestamosPaginada.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -92,6 +94,7 @@
     <Content Include="Images\inactivo.png" />
     <Content Include="Images\icon.ico" />
     <Content Include="Images\imagen_consulta.jpg" />
+    <Content Include="Images\loading2.gif" />
     <Content Include="Images\lupa.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -124,12 +127,19 @@
     <Compile Include="Consultas\WebCuentasCliente.aspx.designer.cs">
       <DependentUpon>WebCuentasCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\WebGraficosTransacciones.aspx.cs">
-      <DependentUpon>WebGraficosTransacciones.aspx</DependentUpon>
+    <Compile Include="Consultas\WebGraficosTransferencias.aspx.cs">
+      <DependentUpon>WebGraficosTransferencias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Consultas\WebGraficosTransacciones.aspx.designer.cs">
-      <DependentUpon>WebGraficosTransacciones.aspx</DependentUpon>
+    <Compile Include="Consultas\WebGraficosTransferencias.aspx.designer.cs">
+      <DependentUpon>WebGraficosTransferencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\WebPrestamosPaginada.aspx.cs">
+      <DependentUpon>WebPrestamosPaginada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\WebPrestamosPaginada.aspx.designer.cs">
+      <DependentUpon>WebPrestamosPaginada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

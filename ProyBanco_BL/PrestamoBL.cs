@@ -37,6 +37,16 @@ namespace ProyBanco_BL
         public Boolean EliminarPrestamo(String strCodigo)
         {
             return objPrestamoADO.EliminarPrestamo(strCodigo);
-        }   
+        }
+
+        public DataTable ListarPrestamos_Paginacion(string strCod_Cli, String strCod_Emp, String strEstado, Int16 intNumPag)
+        {
+            return objPrestamoADO.ListarPrestamos_Paginacion(strCod_Cli, strCod_Emp, strEstado, intNumPag);
+        }
+
+        public Int16 NumPag_ListarPrestamos_Paginacion(String strCod_Cli, String strCod_Emp, String strEstado)
+        {
+            return objPrestamoADO.NumPag_ListarPrestamos_Paginacion(strCod_Cli, strCod_Emp, strEstado);
+        }
     }
 }
