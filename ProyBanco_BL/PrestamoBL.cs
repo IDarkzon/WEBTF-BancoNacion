@@ -48,5 +48,10 @@ namespace ProyBanco_BL
         {
             return objPrestamoADO.NumPag_ListarPrestamos_Paginacion(strCod_Cli, strCod_Emp, strEstado);
         }
+
+        public DataTable ListarPrestamosAnuales()
+        {
+            return objPrestamoADO.ListarPrestamosAnuales();
+        }
     }
 }

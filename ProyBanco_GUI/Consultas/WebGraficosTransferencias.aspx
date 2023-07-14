@@ -46,7 +46,7 @@
                 </tr>
                 <tr class="centrar">
                     <td class="auto-style2">
-                        <asp:Chart ID="grafCantidad" runat="server" Width="500px" Palette="Fire">
+                        <asp:Chart ID="grafCantidad" runat="server" Width="450px" Palette="Fire">
                             <series>
                                 <asp:Series Name="Series1">
                                 </asp:Series>
@@ -55,10 +55,14 @@
                                 <asp:ChartArea Name="ChartArea1">
                                 </asp:ChartArea>
                             </chartareas>
+                            <Titles>
+                                <asp:Title Name="Title1" Text="Cantidad Total de Transferencias por Mes">
+                                </asp:Title>
+                            </Titles>
                         </asp:Chart>
                     </td>
                     <td>
-                        <asp:Chart ID="grafMonto" runat="server" Palette="Fire" Width="500px">
+                        <asp:Chart ID="grafMonto" runat="server" Palette="Fire" Width="450px">
                             <series>
                                 <asp:Series Name="Series1" ChartType="Line">
                                 </asp:Series>
@@ -67,6 +71,10 @@
                                 <asp:ChartArea Name="ChartArea1">
                                 </asp:ChartArea>
                             </chartareas>
+                            <Titles>
+                                <asp:Title Name="Title1" Text="Monto Total de Transferencias por Mes">
+                                </asp:Title>
+                            </Titles>
                         </asp:Chart>
                     </td>
                 </tr>
