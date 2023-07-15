@@ -41,8 +41,6 @@ namespace ProyBanco_GUI.Consultas
                     lblMensajePopup.Text = "Error: " + ex.Message;
                     PopMensaje.Show();
                 }
-                
-
             }
         }
     }

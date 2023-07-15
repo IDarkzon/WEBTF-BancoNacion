@@ -6,7 +6,6 @@
     <section class="espaciado">
         <div class="contenedor">
             <h3>Consulta Información General de Prestamos</h3>
-            <asp:Label ID="lblMensaje" runat="server" CssClass="error"></asp:Label>
             <br />
             <table class="w-100">
                 <tr>
@@ -71,7 +70,49 @@
                 </tr>
             </table>
             <br />
-
+            <asp:LinkButton runat="server" ID="lnkMensaje"></asp:LinkButton>
+            <ajaxToolkit:ModalPopupExtender ID="PopMensaje" runat="server" BackgroundCssClass="FondoAplicacion" BehaviorID="PopMensaje" OkControlID="btnAceptar" PopupControlID="pnlMensaje" TargetControlID="lnkMensaje">
+            </ajaxToolkit:ModalPopupExtender>
+            <asp:Panel ID="pnlMensaje" runat="server">
+                <table cellpadding="0" cellspacing="0" class="auto-style19 panel">
+                    <tr class="cabPopUp">
+                        <td class="auto-style23">&nbsp;</td>
+                        <td class="auto-style26 centrar">Mensaje</td>
+                        <td class="centrar">
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/inactivo.png" />
+                        </td>
+                    </tr>
+                    <tr class="bodPopUp">
+                        <td class="auto-style23">&nbsp;</td>
+                        <td class="auto-style26">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr class="bodPopUp">
+                        <td class="auto-style23">&nbsp;</td>
+                        <td class="auto-style26 centrar">
+                            <asp:Label ID="lblMensajePopup" runat="server"></asp:Label>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr class="bodPopUp">
+                        <td class="auto-style23">&nbsp;</td>
+                        <td class="auto-style26">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr class="bodPopUp">
+                        <td class="auto-style23">&nbsp;</td>
+                        <td class="auto-style26 centrar">
+                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr class="bodPopUp">
+                        <td class="auto-style23">&nbsp;</td>
+                        <td class="auto-style26">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </asp:Panel>
         </div>
     </section>
 </asp:Content>

@@ -45,13 +45,9 @@ namespace ProyBanco_GUI.Consultas
             }
             catch (Exception ex)
             {
-                lblMensaje.Text = "Error: " + ex.Message;
+                lblMensajePopup.Text = "Error: " + ex.Message;
+                PopMensaje.Show();
             }
-        }
-
-        protected void grafPresTotales_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
