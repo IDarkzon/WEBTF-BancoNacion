@@ -56,7 +56,7 @@
                                 </asp:ChartArea>
                             </chartareas>
                             <Titles>
-                                <asp:Title Name="Title1" Text="Cantidad Total de Transferencias por Mes">
+                                <asp:Title Name="Title1" Text="Cantidad Total de Transferencias por Mes" Font="Microsoft Sans Serif, 8pt, style=Bold">
                                 </asp:Title>
                             </Titles>
                         </asp:Chart>
@@ -72,7 +72,7 @@
                                 </asp:ChartArea>
                             </chartareas>
                             <Titles>
-                                <asp:Title Name="Title1" Text="Monto Total de Transferencias por Mes">
+                                <asp:Title Name="Title1" Text="Monto Total de Transferencias por Mes" Font="Microsoft Sans Serif, 8pt, style=Bold">
                                 </asp:Title>
                             </Titles>
                         </asp:Chart>
