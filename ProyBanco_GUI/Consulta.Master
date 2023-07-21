@@ -22,26 +22,31 @@
 <body>
     <nav id="nav">
         <div class="contenedor navbar navbar-expand-lg navbar-dark">
-            <asp:HyperLink CssClass="navbar-brand" runat="server" NavigateUrl="~/Consultas/ConsultaPrincipal.aspx" Font-Size="X-Large">Página de Consultas</asp:HyperLink>
+            <asp:HyperLink CssClass="navbar-brand" runat="server" NavigateUrl="~/Consultas/ConsultaPrincipal.aspx" Font-Size="X-Large">Banco Nación - In Work Service</asp:HyperLink>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/WebCuentasCliente.aspx">Cuentas por Cliente</asp:HyperLink>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consultas</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Consultas/WebCuentasCliente.aspx">Cuentas por Cliente</asp:HyperLink></li>
+                          <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Consultas/WebPrestamosPaginada.aspx">Préstamos Paginada</asp:HyperLink></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/WebPrestamosPaginada.aspx">Préstamos Paginada</asp:HyperLink>
-                    </li>
-                    <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/WebGraficosTransferencias.aspx">Transacciones Info</asp:HyperLink>
-                    </li>
-                    <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" runat="server" NavigateUrl="~/Consultas/WebGraficosPrestamos.aspx">Prestamos Info</asp:HyperLink>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gráficos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Consultas/WebGraficosTransferencias.aspx">Transacciones Info</asp:HyperLink></li>
+                          <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Consultas/WebGraficosPrestamos.aspx">Prestamos Info</asp:HyperLink></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
+            <span class="navbar-text">
+                    Usuario
+            </span>
         </div> 
     </nav>
     <form id="form1" runat="server">

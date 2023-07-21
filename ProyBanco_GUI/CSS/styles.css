@@ -1,0 +1,782 @@
+/* Fuentes */
+/* ---------Google Fonts--------- */
+/* Gilda Display */
+@font-face {
+    font-family: 'Gilda Display';
+    src: url(../fonts/Gilda_Display/GildaDisplay-Regular.ttf);
+}
+/* Ubuntu */
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+:root {
+   /* Paleta de Colores de mi Pagina Web */
+   /* https://color.adobe.com/es/COMPANY%20CRIPTO-color-theme-18470425 */
+   
+   /* Variables que van a manejar los colores que voy a usar */
+   --color-gris: #333333;
+   --color-blanco: #F7F7F7;
+   --color-gris_claro: #C3C3C3;
+   --color-negro: #000000;
+}
+
+/* Elimina el margen externo y el espaciado interno predeterminado */
+* {
+   margin: 0;
+   padding: 0;
+}
+
+/* Selector de Tipo HTML */
+html {
+    scroll-behavior: smooth; /* El scroll ahora será más suave */
+}
+
+body {
+    background-color: white; /* Color de Fondo */
+    color: var(--color-negro); /* Color de Texto */
+    font-size: 20px; /* Tamaño de Texto */
+    font-family: 'Ubuntu', sans-serif; /* Tipo de Letra */
+}
+
+h1 {
+    font-size: 70px; /* Tamaño de Texto */
+    font-family: 'Gilda Display'; /* Tipo de Letra */
+    letter-spacing: 2px; /* Espacio entre las letras */
+}
+
+h2 {
+    font-size: 35px; /* Tamaño de Texto */
+    font-family: 'Gilda Display', serif; /* Tipo de Letra */
+    letter-spacing: 1px; /* Espacio entre las letras */
+    margin-bottom: 15px; /* Espacio debajo */
+}
+
+h3 {
+    font-size: 30px; /* Tamaño de Texto */
+    font-family: 'Gilda Display'; /* Tipo de Letra */
+    margin-bottom: 15px; /* Espacio debajo */
+}
+
+img {
+    /* Elimina el espacio predeterminado que aparece debajo delas imagenes */
+    display: block;
+    width: 100%; /* Ajusta al 100% del ancho de la caja */
+    height: auto; /* Cambia proporcionalmente la altura */
+}
+
+/* Selector de tipo ID */
+/* Sección 0 */
+#top_menu {
+    background-color: var(--color-negro); /* Color de Fondo */
+    color: var(--color-blanco); /* Color de Texto */
+    justify-content: space-between; /* Justificación hacia los lados */
+    /* Espaciado Superior e Inferior */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top_menu .linea_inter {
+    border-width: 1px; /* Ancho de Borde */
+}
+
+#top_menu p {
+    /* Espaciado Izq y Der */
+    padding-left: 8px; 
+    padding-right: 8px;
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+#top_menu i {
+    margin-right: 5px; /* Espaciado Externo hacia la derecha del icono */
+}
+
+#top_menu a {
+    color: var(--color-blanco); /* Color de Texto */
+    text-decoration: none; /* Quitamos el Subrayado */
+}
+
+#top_menu a:hover {
+    color: red; /* Color de Texto Pos-Transición */
+}
+
+/* Fin Sección 0 */
+
+/* Sección 1 */
+#cabecera {
+    background-image: url(../images/fondo.jpg); /* Imagen de Fondo */
+    background-position: center; /* Posición de imagen de Fondo */
+    background-size: cover; /* Espacio que cubre la imagen de fondo */
+}
+
+#cabecera .bordes {
+    /* Modifico los parametros de la clase ya existente */
+    border-width: 0px; /* Ancho del borde */
+    background-color: rgba(255, 0, 0, 0.7); /* Color de Fondo */
+    padding: 0px; /* Espacios dentro de los bordes */
+    border-radius: 0; /* Redondeado del borde */
+}
+
+#cabecera img {
+    width: 20%; /* Tamaño de la imagen */
+    margin: 0 auto; /* Centramos la imagen */
+}
+/* Fin Sección 1 */
+
+/* Seccíon Menú */
+#menu {
+    background-color: var(--color-blanco); /* Color de Fondo */
+    z-index: 30; /* Adelantamos la sección para evitar colisiones con otros objetos (Tuve ese error y con esto lo arreglé) */
+    position: sticky; /* La sección se mueve con la página */
+    top: 0; /* Posición de la sección */
+}
+
+#menu p {
+    margin-right: 25px; /* Margen derecho */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Ubuntu'; /* Tipo de Letra */
+    transition: all 0.3s ease-in-out; /* Configuramos la Transición */
+    color: var(--color-negro); /* Color de Texto */
+}
+
+#menu p:hover {
+    color: red; /* Color de Texto Pos-Transición */
+}
+
+#menu .fila {
+    justify-content: center; /* Ubicación de los elemtnos al centro */
+}
+
+#menu .bordes {
+    /* Modificacíon de la clase original */
+    border-radius: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: var(--color-negro);
+    border-style: solid;
+}
+
+#menu a {
+    text-decoration: none; /* Le quitamos el Subrayado */
+}
+
+#menu .linea_inter {
+    /* Modificacíon de la clase original */
+    border-color: var(--color-negro);
+    padding-left: 25px;
+}
+/* Fin Seccíon Menú */
+
+/* Sección Imagen Central */
+#imagen_central {
+    margin-bottom: -60px;
+}
+
+#imagen_central img {
+    object-fit: contain;
+    transform: translateY(-20%);
+}
+
+.bx-wrapper, .bx-viewport {
+    height: 550px !important;
+}
+
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 !important;
+}
+/* Fin Sección Imagen Central */
+
+/* Sección 4 */
+#objetivos {
+    background-color: var(--color-negro); /* Color de Fondo */
+    color: var(--color-blanco); /* Color de Texto */
+    line-height: 1.5; /* Tamaño de Interlineado */
+}
+
+#objetivos h2 {
+    color: var(--color-blanco); /* Color de Texto */
+}
+
+#objetivos h2 i {
+    font-size: 1em; /* Tamaño de Icono Personalizado */
+}
+
+#objetivos h3 {
+    color: var(--color-blanco); /* Color de Texto */
+    text-decoration: none;
+}
+
+#objetivos .columna i {
+    font-size: 150px; /* Tamaño de Texto */
+    margin-bottom: 15px; /* Espacio debajo */
+}
+
+#objetivos .bordes {
+    background-color: var(--color-gris); /* Color personalizado del fondo de los bordes */
+}
+/* Fin Sección 4 */
+
+/* Seccion 4.5 */
+#servicios {
+    background-color: var(--color-blanco); /* Color de Fondo */
+}
+
+#servicios h2 i {
+    font-size: 1em; /* Tamaño de Icono Personalizado */
+}
+
+#servicios p {
+    font-size: 24px; /* Tamaño de Texto */
+    font-weight: 600; /* Grosor de la Letra */
+    line-height: 80px; /* Espaciado entre Parrafos */
+    margin-left: 15px; /* Espacio hacia la Izquierda */
+    margin-right: 15px; /* Espacio hacia la Derecha */
+}
+
+#servicios .bordes {
+    background-color: var(--color-negro); /* Color de fondo para los bordes */
+}
+
+#servicios p i {
+    color: var(--color-blanco); /* Color de Texto */
+}
+
+#servicios .fila i {
+    font-size: 2em; /* Tamaño de Icono Personalizado */
+    margin-right: 8px;
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+#servicios .fila i:hover {
+    font-size: 2.2em; /* Tamaño del icono pos-transicion */ 
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75); /* Sombra pos-transicion */
+}
+/* Fin Sección 4.5 */
+
+/* Sección 5.5 */
+#pre-pie {
+    background-color: var(--color-negro); /* Color de Fondo */
+    color: var(--color-blanco); /* Color de Letra */
+    text-align: center; /* Alineamos el texto al centro */
+}
+
+#pre-pie .columna:nth-child(1) p {
+    text-align: center; /* Justificamos el Texto */
+    line-height: 1.5; /* Tamaño de Interlineado */
+}
+
+#pre-pie #imagen img{
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+#pre-pie #imagen img:hover {
+    box-shadow: 0px 0px 32px 3px rgba(233,187,52,0.75); /* Agrega sombra pos-transición */
+    transform: scale(1.1); /* Exapande la imagen */
+}
+
+#pre-pie .columna:nth-child(2) i {
+    font-size: 0px; /* Tamaño de Letra */
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+#pre-pie .columna:nth-child(2) p:hover i {
+    font-size: 15px; /* Tamaño de Letra */
+}
+
+#pre-pie .columna:nth-child(2) p {
+    color: var(--color-blanco); /* Color de Letra */
+    line-height: 30px; /* Espaciado entre Lineas */
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+#pre-pie .columna:nth-child(2) p:hover {
+    color: red; /* Color de Letra */
+}
+
+#pre-pie .columna:nth-child(2) a{
+    text-decoration: none; /* Quito el subrayado */
+}
+
+#pre-pie .columna:nth-child(3) .fila {
+    margin-top: 15px; /* Margen Superior */
+}
+
+#pre-pie .columna:nth-child(3) .fila:hover h5 {
+    color: red; /* Color de Texto */
+}
+
+#pre-pie .columna:nth-child(3) .columna h5 {
+    text-align: left; /* Alineación a la Izquierda del Texto */
+    margin-left: -40px; /* Margen Izquierdo Negativo */
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+    color: var(--color-blanco); /* Color de Texto */
+}
+
+#pre-pie .columna:nth-child(3) .columna p  {
+    text-align: left; /* Alineación a la Izquierda del Texto */
+    margin-left: -40px; /* Margen Izquierdo Negativo */
+    color: var(--color-blanco); /* Color de Texto */
+}
+
+#pre-pie .columna:nth-child(3) img {
+    width: 80%; /* Ancho de la Imagen */
+    border-radius: 10px; /* Redondeamos las ezquinas */
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+#pre-pie .columna:nth-child(3) .fila:hover img {
+    filter: grayscale(1); /* Agrega Filtro B/N pos-transición */
+}
+
+#pre-pie .columna:nth-child(4) a{
+    color:var(--color-blanco); /* Color de Letra */
+    text-decoration: none; /* Quito el subrayado */
+    transition: all 0.3s ease-in; /* Configuramos la transición */
+}
+
+#pre-pie .columna:nth-child(4) a:hover {
+    color: red; /* Color de Letra pos-transición */
+}
+
+#pre-pie i {
+    font-size: 15px; /* Tamaño de Letra */
+    margin-right: 10px; /* Margen Derecho */
+}
+
+#pre-pie .iconos i {
+    border: 3px solid var(--color-negro); /* Configuración de Borde */
+    background: var(--color-gris); /* Color de Fondo del Borde */
+    padding: 10px; /* Espaciado Interno del Icono */
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+    margin-right: -4px; /* Margen derecho negativo que contraresta al de arriba */
+    margin-top: 20px; /* Margen Superior */
+}
+
+#pre-pie .iconos i:hover {
+    border-color: red; /* Color de Borde */
+}
+
+#pre-pie h3 {
+    font-size: 20px; /* Tamaño de Letra */
+}
+
+#pre-pie p {
+    text-align: left; /* Alineamos el texto a la izquierda */
+    line-height: 35px; /* Espaciado entre Lineas */
+    font-size: 15px; /* Tamaño de Letra */
+}
+
+#pre-pie .espaciado {
+    /* Modificamos el espaciado de la clase original */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#pre-pie a {
+    text-decoration: none; /* Deshabilitamos el subrayado */
+}
+
+/* Fin Sección 5.5 */
+
+/* Seccion 6 */
+#pie {
+    background-color: var(--color-blanco); /* Color de Fondo */
+    padding-top: 10px; /* Espacio superior */
+    padding-bottom: 10px; /* Espacio inferior */
+    text-align: center; /* Alineación del Texto al centro */
+}
+
+/* Fin Sección 6 */
+
+/* Scroll */
+#scroll {
+    border-radius: 50%; /* Radio del Borde */
+    border: 5px solid var(--color-negro); /* Configuración del Borde */
+    background-color: var(--color-blanco); /* Color de Fondo */
+    color: var(--color-negro); /* Color de Letra */
+
+    height: 45px; /* Alto */
+    width: 45px; /* Ancho */
+    line-height: 45px; /* Interlineado */
+    text-align: center; /* Alineación del Texto al centro */
+    font-size: 20px; /* Tamaño de Letra */
+
+    /* Posición */
+    position: fixed; /* Tipo de Posicionamiento */
+    bottom: 30px; /* Posicion desde abajo */
+    right: 30px; /* Posicion desde la derecha */
+
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+    opacity: 0; /* Opacidad nula (Invisible) */
+}
+
+#scroll:hover {
+    color: red; /* Color de Letra pos-transicion */
+    transform: translateY(-5px) !important; /* Cambia el valor de Y -5px (Sube) */
+    box-shadow: 0px 0px 32px 3px rgba(255, 0, 0, 0.5); /* Agrega sombra pos-transición */
+}
+
+/* Selector de tipo CLASS */
+
+.espaciado {
+    /* Agrega espaciado en los lados superior e inferior de las secciones */
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.container {
+    /* Ancho máximo de las cajas */
+    max-width: 1200px;
+    /* Centrar horizontalmente a las cajas */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Mueve a los contenedores uno al lado de otro  */
+.fila {
+    display: flex;
+
+    /* Truco */
+    /* Quitamos el espacio interno de la primera y ultima caja hijo */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.centrar_cajas {
+    justify-content: center; /* Centra el contenido de las cajas */
+}
+
+.centrar_texto{
+    text-align: center; /* Centra el texto */
+}
+
+.columna {
+    /* Mantiene el ancho de las cajas uniformes */
+    flex-basis: 0; /* Ancho minimo de una caja */
+    flex-grow: 1; /* Establece de forma uniforme el ancho de las cajas hijo */
+
+    /* Espaciado interno izq y der de cada caja */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Variantes de columna (Se agregan según la necesidad) */
+.columna_68 {
+    /* El espacio está limitado a un tercio del espacio del padre */
+    flex-basis: 68%;
+    max-width: 68%;
+
+    /* Espaciado interno izq y der de cada caja */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Fin variantes de columna */
+
+.alinear_vertical {
+    display: flex;
+    flex-direction: column; /* Contenido elementos hijo de forma vertical */
+    justify-content: center; /* Alienacion vertical al centro */
+}
+
+.gran_texto {
+    font-size: 60px; /* Tamaño de Texto */
+}
+
+.resaltar {
+    color: var(--color-blanco); /* Color de Texto */
+    text-decoration: underline; /* Agrega Subrayado al texto */
+    transition: all 0.3s ease-in-out; /* Configuramos la transición */
+}
+
+.bordes {
+    border-width: 5px; /* Ancho del borde */
+    border-style: outset; /* Estilo de bordes */
+    border-color: red; /* Color de bordes */
+    /* border: 5px outset var(--color-amarillo_cripto); Todo lo anterior se puedo resumir de la siguiente manera */
+    padding: 10px; /* Espacios dentro de los bordes */
+    border-radius: 25px; /* Redondeado del borde */
+}
+
+.zoom {
+    overflow: hidden; /* Oculta la expansión de la imagen */
+}
+
+
+/* Variación de borde */
+.linea_inter {
+    border-left: 5px solid var(--color-amarillo_cripto); /* Version Resumida de la configuración de un borde */
+}
+
+
+/* Clase usada como separador (Ignorar) */
+.iconos {
+    color: red;
+}
+
+
+/* Configuramos a la pagina para que sea responsive */
+
+/* Tamaño 1 (Tableta): 850px  */
+@media screen and (max-width: 850px) {
+
+    /* Selector HTML */
+    body {
+        font-size: 14px; /* Tamaño de Letra */
+    }
+
+    h2 {
+        font-size: 25px; /* Tamaño de Letra */
+    }
+
+    .container {
+        max-width: 90%; /* Ancho Maximo */
+    }
+
+    h3 {
+        font-size: 20px; /* Tamaño de Letra */
+    }
+    /* Selector CLASS */
+
+    .espaciado {
+        /* Agrega espaciado en los lados superior e inferior de las secciones */
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .gran_texto {
+        font-size: 40px; /* Tamaño de Letra */
+    }
+
+    /* Selector ID */
+
+    /* Sección Cabecera */
+    #cabecera h1 {
+        font-size: 50px; /* Tamaño de Letra */
+    }
+
+    #cabecera p {
+        font-size: 18px; /* Tamaño de Letra */
+    }
+
+    #cabecera img {
+        height: 78px; /* Altura de la imagen*/
+    }
+
+    /* Sección Menú  */
+    #menu p {
+        font-size: 15px; /* Tamaño de Letra */
+    }
+
+    #menu a:first-child{
+        display: none; /* Ya no se muestra */
+    }
+
+    #menu a:nth-child(2) .linea_inter {
+        border:none; /* Quitamos el Borde */
+    }
+
+    /* Sección Imagen_Central */
+    #imagen_central p {
+        /* Cambiamos el Espaciado */
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* Banner Frase */
+    #banner-frase h1 {
+        font-size: 25px; /* Tamaño de Letra */
+    }
+
+    /* Sección Imagen_Central2 */
+    #imagen_central2 p {
+        /* Cambiamos el Espaciado */
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* Sección Objetivos */
+    #objetivos .columna i {
+        font-size: 112px; /* Tamaño de Letra */
+    }
+
+    #objetivos .columna p {
+        font-size: 13px; /* Tamaño de Letra */
+    }
+
+    /* Sección Servicios */
+    #servicios p {
+        font-size: 14px; /* Tamaño de Letra */
+    } 
+
+    /* Sección xqnosotros */
+    #xqnosotros img {
+        width: 300px; /* Ancho de la imagen */
+        margin-top: -80px; /* Reducimos el margen superior */
+        margin-bottom: -80px; /* Reducimos el margen Inferior */
+    }
+
+    /* Sección Contacto */
+    #contacto .fila i {
+        font-size: 50px; /* Tamaño de Letra */
+    }
+
+    #contacto .iconos i {
+        font-size: 14px; /* Tamaño de Letra */
+    }
+
+    #contacto h3 {
+        font-size: 17px; /* Tamaño de Letra */
+    }
+
+    /* Sección Pre-Pie */
+    #pre-pie i {
+        font-size: 10px; /* Tamaño de Letra */
+    }
+
+    #pre-pie p {
+        font-size: 11px; /* Tamaño de Letra */
+    }
+
+    #pre-pie .iconos i {
+        margin-top: 10px; /* Reducimos el Margen */
+    }
+
+    #pre-pie .columna:nth-child(2) p {
+        line-height: 25px; /* Reducimos el Interlineado */
+    }
+
+    #scroll {
+        bottom: 140px; /* Posicion desde abajo */
+        right: 30px; /* Posicion desde la derecha */
+    }
+}
+
+/* Tamaño 2 (Celular): 650px  */
+
+@media screen and (max-width: 650px) {
+    /* Selector HTML */
+
+    /* Selector CLASS */
+    .gran_texto {
+        font-size: 31px; /* Tamaño de Letra */
+    }
+    /* Selector ID */
+
+    #somos .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+        align-items: center; /* Alineación del Contenido */
+    }
+
+    #somos img {
+        margin: auto; /* Margenes en Automatico */
+        width: 60%; /* Ancho de la Imagen */
+    }
+
+    #somos .bordes {
+        margin-bottom: 30px; /* Margen de Inferior */
+    }
+
+    /* Banner Frase */
+    #banner-frase h1 {
+        font-size: 17px; /* Tamaño de Letra */
+    }
+
+    /* Trabajamos */
+    #trabajamos .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+        align-items: center; /* Alineación del Contenido */
+    }
+
+    #trabajamos img {
+        margin: auto; /* Margenes en Automatico */
+        width: 50%; /* Ancho de la Imagen */
+        margin-bottom: 30px; /* Margen de Inferior */
+    }
+
+    /* Objetivos */
+    #objetivos .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+    }
+
+    #objetivos .fila .bordes {
+        width: 55%; /* Ancho de la Imagen */
+        margin: auto; /* Margenes en Automatico */
+    }
+
+    /* Servicios */
+    #servicios .linea_inter {
+        border: none; /* Deshabilitamos el Borde */
+    }
+
+    #servicios .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+        margin: auto; /* Margenes en Automatico */
+    }
+
+    #servicios p {
+        font-size: 20px; /* Tamaño de Letra */
+    }
+
+    /* xqnosotros */
+    #xqnosotros .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+        align-items: center; /* Alineación del Contenido */
+    }
+
+    #xqnosotros .bordes {
+        margin-bottom: 100px; /* Margen de Inferior */
+    }
+
+    /* Contacto */
+    #contacto .container > .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+    }
+
+    #contacto h3 {
+        font-size: 25px; /* Tamaño de Letra */
+    } 
+
+    #contacto .fila i {
+        font-size: 80px; /* Tamaño de Letra */
+    }
+
+    #contacto .iconos i {
+        font-size: 25px; /* Tamaño de Letra */
+    }
+
+    /* Pre-pie */
+    #pre-pie .container > .fila {
+        flex-direction: column; /* Cambio de Sentido del Flex */
+        align-items: center; /* Alineación del Contenido */
+        margin: auto; /* Margenes en Automatico */
+    }
+
+    #pre-pie p {
+        font-size: 20px; /* Tamaño de Letra */
+        margin-bottom: 10px; /* Margen de Inferior */
+    }
+    
+
+    #pre-pie img {
+        width: 40%; /* Ancho de la Imagen */
+        margin: auto; /* Margenes en Automatico */
+    }
+
+    #pre-pie i {
+        font-size: 25px; /* Tamaño de Letra */
+    }
+
+    #pre-pie h5 {
+        font-size: 25px; /* Tamaño de Letra */
+    }
+
+    #pre-pie .columna {
+        margin-bottom: 30px; /* Margen de Inferior */
+    }
+}

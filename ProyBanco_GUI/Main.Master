@@ -1,27 +1,163 @@
-﻿</@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ProyBanco_GUI.Main">
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ProyBanco_GUI.Main" %>
 
 <!DOCTYPE html>
-
 <html lang="es">
-<head runat="server">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <%--Referencia a la hoja de estilos  de la carpeta CSS--%>
-    <link href="CSS/main.css" rel="stylesheet" type="text/css" />
+    <title>Banco Nación</title>
+    <!-- Icono de la pagina web (Favicon) -->
+    <link rel="shortcut icon" href="Images/icon.ico">
 
-    <asp:ContentPlaceHolder ID="head" runat="server">
+    <!-- Enlazo el archivo de los estilos -->
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- Enlazar con la libreria 6.1.1 de Font-Awesome subida en el repositorio CDNJS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Enlazar archivo javascript -->
+    <script src="js/index.js"></script>
+
+    <!-- Carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".bxslider").bxSlider({
+            auto: true,
+            autoControls: false,
+            controls: false,
+            stopAutoOnClick: true,
+            pager: false,
+            slideWidth: 0,
+            speed: 500,
+          });
+        });
+    </script>
+     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-</head>
+</head>   
 <body>
-    <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager" runat="server" EnableScriptGlobalization="true"></asp:ScriptManager>
+    <!-- Sección 0: Top Menu -->
+    <nav id="top_menu">
+        <div class="container">
+            <div class="fila">
+                <div class="columna">
+                    <p>Ahorra dinero y tiempo...</p>
+                </div>
+                <asp:HyperLink ID="HyperLink1" runat="server" title="Inicia Sesión"><p><i class="fa-solid fa-screwdriver-wrench"></i></i>Inicia sesión</p></asp:HyperLink>
+            </div>
 
+        </div>
+    </nav>
+
+    <!-- Sección 1: Cabecera -->
+    <header id="cabecera">
+        <div class="bordes">
+            <div class="container">
+                <div class="centrar_texto">
+                    <h1>Banco Nación</h1>
+                </div> <!-- fila / centrar_cajas -->
+            </div> <!-- container -->
+        </div>
+    </header> <!-- cabecera -->
+
+    <!-- Sección 1A: Menú -->
+    <nav id="menu">
+        <div class="bordes">
+            <div class="container">
+                <div class="fila">
+                    <a title="Inicio" href="#"><p>Inicio</p></a>
+                    <a title="Nuestros Objetivos" href="index.html#objetivos"><p class="linea_inter">Nuestros Objetivos</p></a> <!-- linea_inter -->
+                    <a title="Nuestros Servicios" href="index.html#servicios"><p class="linea_inter">Nuestros Servicios</p></a> <!-- linea_inter -->
+                </div> <!-- fila -->
+            </div> <!-- container -->
+        </div> <!-- bordes -->
+    </nav> <!-- menu -->
+    <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    <!-- Sección 5.5: Pre-pie -->
+    <footer id="pre-pie">
+        <div class="container espaciado">
+            <div class="fila">
+                <article class="columna alinear_vertical">
+                    <figure id="imagen">
+                        <img src="images/imagen_prepie.jpg" alt="Logo con Fondo de CriptoChangos">
+                    </figure> <!-- imagen -->
+                </article> <!-- columna / alinear_vertical -->
+
+                <nav class="columna">
+                    <h3>Links Útiles</h3>
+                    <a title="Inicio" href="#"><p><i class="fa-solid fa-arrow-right"></i>Inicio</p></a>
+                    <a title="Nuestros Objetivos" href="index.html#objetivos"><p><i class="fa-solid fa-arrow-right"></i>Nuestros Objetivos</p></a>
+                    <a title="Nuestros Servicios" href="index.html#servicios"><p><i class="fa-solid fa-arrow-right"></i>Nuestros Servicios</p></a>
+                    <a title="Login" href="#"><p><i class="fa-solid fa-arrow-right"></i>Incia Sesión</p></a>
+                </nav> <!-- columna -->
+
+                <div class="columna">
+                    <h3>Noticias</h3>
+                    <a title="Noticia 1" href="#">
+                        <article class="fila">
+                            <figure class="columna">
+                                <img src="images/noticia_1.jpg" alt="Noticia 1">
+                            </figure> <!-- columna -->
+
+                            <div class="columna alinear_vertical">
+                                <h5>Cae el Precio del Bitcoin</h5>
+                                <p>2 Mayo - 8:00 am</p>
+                            </div> <!-- columna / alinear_vertical -->
+                        </article> <!-- fila -->
+                    </a>
+                     
+                    <a title="Noticia 2" href="#">
+                        <article class="fila">
+                            <figure class="columna">
+                                <img src="images/noticia_2.jpg" alt="Noticia 2">
+                            </figure> <!-- columna -->
+
+                            <div class="columna alinear_vertical">
+                                <h5>Se vende NFT de Eminem</h5>
+                                <p>3 Feb - 5:00 pm</p>
+                            </div> <!-- columna / alinear_vertical -->
+                        </article> <!-- fila -->
+                    </a>
+                         
+                </div> <!-- columna -->
+
+                <nav class="columna">
+                    <h3>Contactanos</h3>
+                    <a title="Ubíquenos" href="contactarnos.html#mapa"><p><i class="fa-solid fa-location-dot fa-fw"></i>Av.EsperoSacar20 Lima, Perú</p></a>
+                    <a title="Llámenos" href="tel:+5101555555"><p><i class="fa-solid fa-phone fa-fw"></i>+51 (01)555-555</p></a>
+                    <a title="Escríbenos" target="_blank" href="https://wa.me/51977867543?text=Solicito Información Adicional"><p><i class="fa-brands fa-whatsapp fa-fw"></i>+51 955-415-434</p></a>
+                    <a title="Envianos un Correo" href="mailto:pongame20@gmail.com?subject=Solicito Información Adicional"><p><i class="fa-solid fa-envelope fa-fw"></i>pongame20@gmail.com</p></a>
+                    <nav class="iconos">
+                        <!-- Redes Sociales Inexistentes (Es una Empresa inventada) -->
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f fa-fw"></i></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" title="Twitter"><i class="fa-brands fa-twitter fa-fw"></i></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" title="Instagram"><i class="fa-brands fa-instagram fa-fw"></i></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" title="Youtube"><i class="fa-brands fa-youtube fa-fw"></i></a>
+                    </nav> <!-- iconos -->
+                </nav> <!-- columna -->
+
+            </div> <!-- fila -->
+
+        </div> <!-- container / espaciado -->
+    </footer> <!-- pre-pie -->
+
+    <!-- Sección 6: Pie -->
+    <footer id="pie">
+        <div class="container">
+            <p>&copy; Banco Nación - Derechos reservados</p>
+        </div> <!-- contenedor -->
+    </footer> <!-- pie -->
+    
+    <!-- Botón de Navegación rapida -->
+    <a href="#" id="scroll"><i class="fa-solid fa-angles-up fa-fw"></i></a>
 </body>
 </html>
