@@ -53,5 +53,10 @@ namespace ProyBanco_BL
         {
             return objPrestamoADO.ListarPrestamosAnuales();
         }
+
+        public DataTable PrestamosCliente(String Num_doc_cli)
+        {
+            return objPrestamoADO.PrestamosCliente(Num_doc_cli);
+        }
     }
 }

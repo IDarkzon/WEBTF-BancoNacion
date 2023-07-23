@@ -60,9 +60,31 @@ namespace ProyBanco_ADO
                     objPrestamoBE.Cod_Pre = dtr["Codigo"].ToString();
                     objPrestamoBE.Mon_Pre = Convert.ToSingle(dtr["Monto"].ToString());
                     objPrestamoBE.Cuot_Pre = Convert.ToInt16(dtr["Cuotas"].ToString());
-                    objPrestamoBE.Fec_Sol = Convert.ToDateTime(dtr["Fecha Solicitud"].ToString());
-                    objPrestamoBE.Fec_Rech = Convert.ToDateTime(dtr["Fecha Rechazo"].ToString());
-                    objPrestamoBE.Fec_Can = Convert.ToDateTime(dtr["Fecha Cancelacion"].ToString());
+                    if (dtr["Fecha Solicitud"] != DBNull.Value)
+                    {
+                        objPrestamoBE.Fec_Sol = Convert.ToDateTime(dtr["Fecha Solicitud"].ToString());
+                    }
+                    else
+                    {
+                        objPrestamoBE.Fec_Sol = DateTime.MinValue;
+                    }
+
+                    if (dtr["Fecha Rechazo"] != DBNull.Value)
+                    {
+                        objPrestamoBE.Fec_Rech = Convert.ToDateTime(dtr["Fecha Rechazo"].ToString());
+                    }
+                    else
+                    {
+                        objPrestamoBE.Fec_Rech = DateTime.MinValue;
+                    }
+                    if (dtr["Fecha Cancelacion"] != DBNull.Value)
+                    {
+                        objPrestamoBE.Fec_Can = Convert.ToDateTime(dtr["Fecha Cancelacion"].ToString());
+                    }
+                    else
+                    {
+                        objPrestamoBE.Fec_Can = DateTime.MinValue;
+                    }
                     objPrestamoBE.Pre_Est = Convert.ToInt16(dtr["Pre_Est"].ToString());
                     objPrestamoBE.Com_Deu = Convert.ToInt16(dtr["Com_Deu"].ToString());
                     objPrestamoBE.Est_Pre = Convert.ToInt16(dtr["Est_Pre"].ToString());
@@ -265,6 +287,29 @@ namespace ProyBanco_ADO
                 SqlDataAdapter ada = new SqlDataAdapter(cmd);
                 ada.Fill(dts, "PrestamosAnuales");
                 return dts.Tables["PrestamosAnuales"];
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable PrestamosCliente(String Num_doc_cli)
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_PrestamosCliente";
+                cmd.Parameters.Clear();
+
+                cmd.Parameters.AddWithValue("@Num_doc_cli", Num_doc_cli);
+
+                SqlDataAdapter ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "PrestamosCliente");
+                return dts.Tables["PrestamosCliente"];
             }
             catch (SqlException ex)
             {
