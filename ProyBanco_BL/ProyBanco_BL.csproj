@@ -47,6 +47,7 @@
     <Compile Include="PagoBL.cs" />
     <Compile Include="PrestamoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolBL.cs" />
     <Compile Include="TransferenciaBL.cs" />
     <Compile Include="UbigeoBL.cs" />
     <Compile Include="UsuarioBL.cs" />

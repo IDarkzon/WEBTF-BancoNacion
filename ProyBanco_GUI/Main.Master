@@ -47,7 +47,7 @@
                 <div class="columna">
                     <p>Ahorra dinero y tiempo...</p>
                 </div>
-                <asp:HyperLink ID="HyperLink1" runat="server" title="Inicia Sesión"><p><i class="fa-solid fa-screwdriver-wrench"></i></i>Inicia sesión</p></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" title="Inicia Sesión" NavigateUrl="~/Login.aspx"><p><i class="fa-solid fa-screwdriver-wrench"></i></i>Inicia sesión</p></asp:HyperLink>
             </div>
 
         </div>
@@ -69,9 +69,9 @@
         <div class="bordes">
             <div class="container">
                 <div class="fila">
-                    <a title="Inicio" href="#"><p>Inicio</p></a>
-                    <a title="Nuestros Objetivos" href="index.html#objetivos"><p class="linea_inter">Nuestros Objetivos</p></a> <!-- linea_inter -->
-                    <a title="Nuestros Servicios" href="index.html#servicios"><p class="linea_inter">Nuestros Servicios</p></a> <!-- linea_inter -->
+                    <a title="Inicio" href="WEBPrincipal.aspx"><p>Inicio</p></a>
+                    <a title="Nuestros Objetivos" href="WEBPrincipal.aspx#objetivos"><p class="linea_inter">Nuestros Objetivos</p></a> <!-- linea_inter -->
+                    <a title="Nuestros Servicios" href="WEBPrincipal.aspx#servicios"><p class="linea_inter">Nuestros Servicios</p></a> <!-- linea_inter -->
                 </div> <!-- fila -->
             </div> <!-- container -->
         </div> <!-- bordes -->
@@ -94,10 +94,10 @@
 
                 <nav class="columna">
                     <h3>Links Útiles</h3>
-                    <a title="Inicio" href="#"><p><i class="fa-solid fa-arrow-right"></i>Inicio</p></a>
-                    <a title="Nuestros Objetivos" href="index.html#objetivos"><p><i class="fa-solid fa-arrow-right"></i>Nuestros Objetivos</p></a>
-                    <a title="Nuestros Servicios" href="index.html#servicios"><p><i class="fa-solid fa-arrow-right"></i>Nuestros Servicios</p></a>
-                    <a title="Login" href="#"><p><i class="fa-solid fa-arrow-right"></i>Incia Sesión</p></a>
+                    <a title="Inicio" href="WEBPrincipal.aspx"><p><i class="fa-solid fa-arrow-right"></i>Inicio</p></a>
+                    <a title="Nuestros Objetivos" href="WEBPrincipal.aspx#objetivos"><p><i class="fa-solid fa-arrow-right"></i>Nuestros Objetivos</p></a>
+                    <a title="Nuestros Servicios" href="WEBPrincipal.aspx#servicios"><p><i class="fa-solid fa-arrow-right"></i>Nuestros Servicios</p></a>
+                    <a title="Login" href="Login.aspx"><p><i class="fa-solid fa-arrow-right"></i>Inicia Sesión</p></a>
                 </nav> <!-- columna -->
 
                 <div class="columna">

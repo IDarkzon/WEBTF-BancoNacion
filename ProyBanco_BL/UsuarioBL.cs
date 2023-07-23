@@ -14,9 +14,10 @@ namespace ProyBanco_BL
     {
         UsuarioADO objUsuarioADO = new UsuarioADO();
 
-        public UsuarioBE ConsultarUsuario(String strCodigo)
+        public Boolean Insertar(UsuarioBE objUsuarioBE)
         {
-            return objUsuarioADO.ConsultarUsuario(strCodigo);
+            return objUsuarioADO.Insertar(objUsuarioBE);
         }
     }
 }
+

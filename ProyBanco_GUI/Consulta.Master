@@ -48,13 +48,20 @@
                             <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Transacciones/WebTransaccionPagos.aspx">Transacción Pagos</asp:HyperLink></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Seguridad</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Seguridad/Roles.aspx">Roles</asp:HyperLink></li>
+                            <li><asp:HyperLink CssClass="dropdown-item" runat="server" NavigateUrl="~/Seguridad/Usuarios.aspx">Usuarios</asp:HyperLink></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <asp:HyperLink ID="HyperLink1" CssClass="nav-link" runat="server">Salir</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" CssClass="nav-link" runat="server" NavigateUrl="~/WEBPrincipal.aspx">Salir</asp:HyperLink>
                     </li>
                 </ul>
             </div>
             <span class="navbar-text">
-                    Usuario
+                <asp:LoginName ID="LoginName1" runat="server" />
             </span>
         </div> 
     </nav>
@@ -65,7 +72,6 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
-
     <!-- Sección Pie -->
     <footer id="pie">
         <div class="contenedor">
