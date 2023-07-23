@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -57,7 +58,11 @@ namespace ProyBanco_GUI.Consultas
 
                 objPagoBE.Cod_Pre = cboPrestamo.SelectedValue;
                 objPagoBE.Est_Pag = Convert.ToInt16(chkActivo.Checked);
-                objPagoBE.Usu_Registro = "sebasfra"; // <----- Arreglar xd
+
+                MembershipUser usuarioActual = Membership.GetUser();
+                String usuario = usuarioActual.UserName;
+
+                objPagoBE.Usu_Registro = usuario;
 
 
                 // Enviando datos
